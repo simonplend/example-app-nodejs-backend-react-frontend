@@ -2,7 +2,8 @@
   "name": "example-app",
   "scripts": {
     "build": "webpack --mode development --entry ./src/client/index.js --output ./static/bundle.js",
-    "start": "node src/server/app.js"
+    "start": "node src/server/app.js",
+    "deploy": "aws s3 sync dist/ s3://newnodefe"
   },
   "dependencies": {
     "express": "^4.17.1"
